@@ -1,0 +1,166 @@
+name: Mobile App CI/CD
+
+on:
+  push:
+    branches: [ master, development ]
+  pull_request:
+    branches: [ master, development ]
+
+jobs:
+  # Job 1: Code Quality và Linting
+  code-quality:
+    runs-on: ubuntu-latest
+    name: Code Quality Check
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run ESLint
+      run: |
+        npx eslint screens/ utils/ --ext .js,.jsx --format stylish
+        
+    - name: Check code formatting
+      run: |
+        npx prettier --check "screens/**/*.js" "utils/**/*.js"
+        
+    - name: Validate JSON configs
+      run: |
+        node -e "JSON.parse(require('fs').readFileSync('assets/river.json', 'utf8'))"
+        node -e "JSON.parse(require('fs').readFileSync('assets/hanoi.json', 'utf8'))"
+        node -e "JSON.parse(require('fs').readFileSync('assets/chaihg.json', 'utf8'))"
+
+  # Job 2: Security và Dependency Check
+  security-scan:
+    runs-on: ubuntu-latest
+    name: Security Scan
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run security audit
+      run: npm audit --audit-level moderate
+      
+    - name: Check for outdated packages
+      run: npm outdated || true
+      
+    - name: Scan for secrets
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: master
+        head: HEAD
+
+  # Job 3: Build Testing
+  build-test:
+    runs-on: ubuntu-latest
+    name: Build Test
+    needs: [code-quality, security-scan]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Install Expo CLI
+      run: npm install -g @expo/cli
+      
+    - name: Expo Doctor Check
+      run: npx expo doctor
+      
+    - name: Test Metro bundler
+      run: |
+        timeout 60s npx expo start --non-interactive --max-workers 1 || true
+        
+    - name: Validate app.json/app.config.js
+      run: npx expo config --type prebuild
+
+  # Job 4: APK Build (on master only)
+  build-apk:
+    runs-on: ubuntu-latest
+    name: Build APK
+    needs: [build-test]
+    if: github.ref == 'refs/heads/master'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Setup Java for Android
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      
+    - name: Install Expo CLI
+      run: npm install -g @expo/cli eas-cli
+      
+    - name: Login to Expo
+      run: npx expo login
+      env:
+        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        
+    - name: Build APK
+      run: |
+        npx expo build:android --type apk --non-interactive
+        
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release.apk
+        path: '*.apk'
+        retention-days: 30
+
+  # Job 5: Notification (on failure)
+  notify-failure:
+    runs-on: ubuntu-latest
+    name: Notify on Failure
+    if: failure()
+    needs: [code-quality, security-scan, build-test, build-apk]
+    
+    steps:
+    - name: Send notification
+      run: |
+        echo "❌ Mobile App CI/CD Failed"
+        echo "Branch: ${{ github.ref_name }}"
+        echo "Commit: ${{ github.sha }}"
+        echo "Actor: ${{ github.actor }}"
