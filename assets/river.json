@@ -1,0 +1,1134 @@
+[
+  {
+    "field_id": "field_001",
+    "label": "1. Ngày/tháng/năm",
+    "type": "autofixed",
+    "required": false,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_002",
+    "label": "2. Mẻ nấu số",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_003",
+    "label": "3. Tank số",
+    "type": "dropdown",
+    "required": true,
+    "value": "",
+    "option": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_004",
+    "label": "4. Nhân viên",
+    "type": "autofixed",
+    "required": false,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_005",
+    "label": "5. Nhiệt độ nước xuống gạo ",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_006",
+    "label": "6. Thể tích nước nồi gạo",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1500",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_007",
+    "label": "7. pH nước nấu",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_008",
+    "label": "8. TDS nước nấu",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_009",
+    "label": "9. Thể tích enzyme 1 (Lít) ",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.12",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_010",
+    "label": "10. Giờ bắt đầu xuống bột gạo",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_011",
+    "label": "11. Giờ kết thúc xuống bột gạo",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_012",
+    "label": "12. Giờ bắt đầu nâng nhiệt 90°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C11",
+    "notes": ""
+  },
+  {
+    "field_id": "field_013",
+    "label": "13. Giờ bắt đầu giữ nhiệt 90°C",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_014",
+    "label": "14. Số phút giữ nhiệt 90°C",
+    "type": "fixed",
+    "required": false,
+    "value": "00:40",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_015",
+    "label": "15. Giờ kết thúc giữ nhiệt 90°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C13+C14",
+    "notes": ""
+  },
+  {
+    "field_id": "field_016",
+    "label": "16. Loại malt thường",
+    "type": "dropdown",
+    "required": true,
+    "value": "Joe white",
+    "option": [
+      "Joe white",
+      "Malteurop",
+      "Đường Malt"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_017",
+    "label": "17. Khối lượng malt thường ",
+    "type": "preset-editable",
+    "required": true,
+    "value": "625",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_018",
+    "label": "18. Loại malt đặc biệt",
+    "type": "dropdown",
+    "required": true,
+    "value": "",
+    "option": [
+      "Munich",
+      "Khác"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_019",
+    "label": "19. Khối lượng malt đặc biệt",
+    "type": "preset-editable",
+    "required": true,
+    "value": "50",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_020",
+    "label": "20. Thể tích nước nồi malt",
+    "type": "preset-editable",
+    "required": true,
+    "value": "2000",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_021",
+    "label": "21. Bắt Đầu xuống malt 37˚C~42˚C ",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_022",
+    "label": "22. Kết thúc xuống malt 37˚C~42˚C ngâm 30 phút",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_023",
+    "label": "23. CaCl2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_024",
+    "label": "24. CaSO4",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_025",
+    "label": "25. Thể tích enzyme 2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.2",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_026",
+    "label": "26. Thời gian ngâm malt",
+    "type": "fixed",
+    "required": false,
+    "value": "00:30",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_027",
+    "label": "27. Kết thúc ngâm malt",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C22+C26",
+    "notes": ""
+  },
+  {
+    "field_id": "field_028",
+    "label": "28. Hội cháo lần 1",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C15",
+    "notes": ""
+  },
+  {
+    "field_id": "field_029",
+    "label": "29. Kết thúc Hội cháo lần 1",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_030",
+    "label": "30. Nhiệt độ dịch cháo sau hội lần 1",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_031",
+    "label": "31. Giờ bắt đầu nâng nhiệt 52°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C29",
+    "notes": ""
+  },
+  {
+    "field_id": "field_032",
+    "label": "32. Giờ bắt đầu giữ nhiệt 52°C",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_033",
+    "label": "33. Số phút giữ nhiệt 52°C",
+    "type": "fixed",
+    "required": false,
+    "value": "00:10",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_034",
+    "label": "34. Giờ kết thúc giữ nhiệt 52°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C32+C33",
+    "notes": ""
+  },
+  {
+    "field_id": "field_035",
+    "label": "35. Hội cháo lần 2",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C34",
+    "notes": ""
+  },
+  {
+    "field_id": "field_036",
+    "label": "36. Kết thúc Hội cháo lần 2",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_037",
+    "label": "37. Nhiệt độ dịch cháo sau hội lần 2",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_038",
+    "label": "38. Thể tích nước tráng gạo",
+    "type": "preset-editable",
+    "required": true,
+    "value": "100",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_039",
+    "label": "39. Giờ bắt đầu nâng nhiệt 65°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C36",
+    "notes": ""
+  },
+  {
+    "field_id": "field_040",
+    "label": "40. Giờ bắt đầu giữ nhiệt 65°C",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_041",
+    "label": "41. Số phút giữ nhiệt 65°C",
+    "type": "fixed",
+    "required": false,
+    "value": "00:30",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_042",
+    "label": "42. Giờ kết thúc giữ nhiệt 65°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C40+C41",
+    "notes": ""
+  },
+  {
+    "field_id": "field_043",
+    "label": "43. pH giữ 65°C",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_044",
+    "label": "44. A.lactic ( Lít )",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_045",
+    "label": "45. Giờ bắt đầu nâng nhiệt 75°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C42",
+    "notes": ""
+  },
+  {
+    "field_id": "field_046",
+    "label": "46. Giờ bắt đầu giữ nhiệt 75°C",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_047",
+    "label": "47. Số phút giữ nhiệt 75°C",
+    "type": "fixed",
+    "required": false,
+    "value": "00:25",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_048",
+    "label": "48. Giờ kết thúc giữ 75°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C46+C47",
+    "notes": ""
+  },
+  {
+    "field_id": "field_049",
+    "label": "49. Kiểm tra tinh bột",
+    "type": "dropdown",
+    "required": true,
+    "value": "Đạt",
+    "option": [
+      "Đạt",
+      "Không Đạt"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_050",
+    "label": "50. Giờ bắt đầu nâng nhiệt 76°C",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C48",
+    "notes": ""
+  },
+  {
+    "field_id": "field_051",
+    "label": "51. Bắt đầu bơm sang lọc đã có 300 L nước lót",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_052",
+    "label": "52. Kết thúc bơm sang lọc",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_053",
+    "label": "53. Thể tích nước tráng malt",
+    "type": "preset-editable",
+    "required": true,
+    "value": "100",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_054",
+    "label": "54. Bắt đầu lắng cốt",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_055",
+    "label": "55. Kết thúc lắng cốt",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_056",
+    "label": "56. Thể tích enzyme 1",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.05",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_057",
+    "label": "57. Bắt đầu lọc cốt",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_058",
+    "label": "58. Giờ bắt đầu tưới bã 1 (L)",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_059",
+    "label": "59. Thể tích nước tưới bã 1",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1500",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_060",
+    "label": "60. Nhiệt độ nước rửa bã 1",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_061",
+    "label": "61. Giờ bắt đầu tưới bã 2 (L)",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_062",
+    "label": "62. Thể tích nước tưới bã 2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1300",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_063",
+    "label": "63. Nhiệt độ nước rửa bã 2",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_064",
+    "label": "64. Giờ bắt đầu tưới bã 3 (L)",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_065",
+    "label": "65. Thể tích nước tưới bã 3",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1000",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_066",
+    "label": "66. Nhiệt độ nước rửa bã 3",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_067",
+    "label": "67. Giờ kết thúc rửa bã",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_068",
+    "label": "68. Đường sót",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_069",
+    "label": "69. Giờ nồi sôi hoa đạt 96°C",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_070",
+    "label": "70. Khối lượng cao đắng bổ sung",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.21",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_071",
+    "label": "71. % alpha cao đắng",
+    "type": "preset-editable",
+    "required": true,
+    "value": "50",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_072",
+    "label": "72. Khối lượng hoa viên đắng bổ sung lần 1",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.75",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_073",
+    "label": "73. % alpha hoa viên đắng lần 1",
+    "type": "preset-editable",
+    "required": true,
+    "value": "10",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_074",
+    "label": "74. Khối lượng chất trợ lắng",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.15",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_075",
+    "label": "75. Caramel",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_076",
+    "label": "76. Thể tích trước sôi",
+    "type": "preset-editable",
+    "required": true,
+    "value": "7600",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_077",
+    "label": "77. Độ đường trước sôi",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_078",
+    "label": "78. pH trước sôi",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_079",
+    "label": "79. Giờ bắt đầu sôi lần 1",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_080",
+    "label": "80. Thời gian sôi lần 1",
+    "type": "preset-editable",
+    "required": true,
+    "value": "00:50",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_081",
+    "label": "81. Giờ kết thúc sôi lần 1",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C79+C80",
+    "notes": ""
+  },
+  {
+    "field_id": "field_082",
+    "label": "82. Khối lượng hoa viên đắng bổ sung lần 2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0.75",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_083",
+    "label": "83. % alpha hoa viên đắng lần 2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "10",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_084",
+    "label": "84. Giờ bắt đầu sôi lần 2",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_085",
+    "label": "85. Thời gian sôi lần 2",
+    "type": "preset-editable",
+    "required": true,
+    "value": "00:15",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_086",
+    "label": "86. Giờ kết thúc sôi lần 2",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C84+C85",
+    "notes": ""
+  },
+  {
+    "field_id": "field_087",
+    "label": "87. Thể tích sau sôi",
+    "type": "preset-editable",
+    "required": true,
+    "value": "7000",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_088",
+    "label": "88. Độ đường sau sôi",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_089",
+    "label": "89. pH sau sôi",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_090",
+    "label": "90. Tổng thời gian sôi (phút)",
+    "type": "auto",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "=C80+C85",
+    "notes": ""
+  },
+  {
+    "field_id": "field_091",
+    "label": "91. Khối lượng hoa viên thơm bổ sung lần 3",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1.1",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_092",
+    "label": "92. % alpha hoa viên thơm lần 3",
+    "type": "preset-editable",
+    "required": true,
+    "value": "3",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_093",
+    "label": "93. Giờ bắt đầu bơm lắng xoáy",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_094",
+    "label": "94. Khối lượng hoa viên thơm bổ sung lần 4",
+    "type": "preset-editable",
+    "required": true,
+    "value": "1.1",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_095",
+    "label": "95. % alpha hoa viên thơm lần 4",
+    "type": "preset-editable",
+    "required": true,
+    "value": "3",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_096",
+    "label": "96. Giờ kết thúc bơm lắng xoáy và bắt đầu lắng 25'",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_097",
+    "label": "97. Giờ bắt đầu lạnh nhanh",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_098",
+    "label": "98. Giờ kết thúc lạnh nhanh",
+    "type": "time_dropdown",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_099",
+    "label": "99. pH cuối",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_100",
+    "label": "100. Plato cuối",
+    "type": "float",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_100_photo",
+    "label": "100a. Hình ảnh Plato cuối",
+    "type": "photo",
+    "required": false,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_101",
+    "label": "101. Độ màu Lovibond",
+    "type": "integer",
+    "required": true,
+    "value": "6",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_102",
+    "label": "102. %Bay Hơi",
+    "type": "autofixed",
+    "required": false,
+    "value": "",
+    "option": [],
+    "calculate": "((field_087-field_076)/field_076)*100",
+    "notes": ""
+  },
+  {
+    "field_id": "field_103",
+    "label": "103. Thể tích dịch (L)",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_104",
+    "label": "104. Loại hoa đắng",
+    "type": "dropdown",
+    "required": true,
+    "value": "HDPE P90",
+    "option": [
+      "HDPE P90"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_105",
+    "label": "105. Loại hoa thơm",
+    "type": "dropdown",
+    "required": true,
+    "value": "Saaz",
+    "option": [
+      "Saaz"
+    ],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_106",
+    "label": "106. Đời men",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_107",
+    "label": "107. Khối lượng men",
+    "type": "integer",
+    "required": true,
+    "value": "",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_108",
+    "label": "108. Chất hỗ trợ lên men",
+    "type": "preset-editable",
+    "required": true,
+    "value": "0",
+    "option": [],
+    "calculate": "",
+    "notes": ""
+  },
+  {
+    "field_id": "field_109",
+    "label": "109. Tổng lượng alpha đắng theo lý thuyết",
+    "type": "autofixed",
+    "required": false,
+    "value": "",
+    "option": [],
+    "calculate": "((field_070*field_071)+(field_072*field_073)+(field_082*field_083)+(field_091*field_092)+(field_094*field_095))*10",
+    "notes": ""
+  }
+]
